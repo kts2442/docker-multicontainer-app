@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 const pool = mysql.createPool({
-  connectionLimit: 10,
+  connectionLimit: 15,
   host: "mysql",
   user: "root",
   password: "kts1004",
