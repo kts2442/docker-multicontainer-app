@@ -21,15 +21,15 @@ after_success:
   - docker push kts2442/docker-frontend
   - docker push kts2442/docker-backend
   - docker push kts2442/docker-nginx
-# deploy:
-#   provider: elasticbeanstalk
-#   region: "ap-northeast-2"
-#   app: "docker-fullstack-app"
-#   env: "DockerFullstackApp-env"
-#   bucket_name: elasticbeanstalk-ap-northeast-2-972153559337
-#   bucket_path: "docker-fullstack-app"
-#   on:
-#     branch: master
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker-multicontainer-app"
+  env: "Dockermulticontainerapp-env"
+  bucket_name: elasticbeanstalk-us-east-1-650702679105
+  bucket_path: "docker-multicontainer-app"
+  on:
+    branch: master
 
-#   access_key_id: $AWS_ACCESS_KEY
-#   secret_access_key: $AWS_SECRET_ACCESS_KEY
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
